@@ -1560,7 +1560,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .comments__blocks {
-  margin-top: 51px;
+  margin: 51px 0 60px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
