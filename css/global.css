@@ -384,7 +384,7 @@ template {
 
 @media (max-width: 768px) {
   .menu__list {
-    z-index: 200;
+    z-index: 400;
     position: absolute;
     top: 0;
     right: -400px;
@@ -392,7 +392,11 @@ template {
     row-gap: 20px;
     flex-direction: column;
     opacity: 0;
-    transition: 0.7s cubic-bezier(0.02, 0.46, 0.45, 0.96);
+    transition: 0.7s ease-out;
+    overflow: auto;
+    height: calc(100vh - 85px);
+    max-height: 260px;
+    margin-top: 0 !important;
   }
   .menu__list a {
     color: #FF9900;
@@ -400,8 +404,12 @@ template {
   }
   .menu__list.active {
     opacity: 1;
-    top: 65px;
-    right: 70px;
+    top: 85px;
+    right: 60px;
+    padding-bottom: 20px;
+  }
+  .menu__list.active .menu__item {
+    margin-right: 20px;
   }
 }
 .top__burger {
@@ -411,7 +419,7 @@ template {
   .top__burger {
     display: block;
     margin-top: 20px;
-    z-index: 100;
+    z-index: 300;
     min-width: 60px;
     min-height: 60px;
     background: #FFF;
@@ -900,10 +908,10 @@ input[type=search]::-webkit-search-results-decoration {
     margin-top: 30px;
   }
 }
-
-.block img {
+.instruction__block img {
   width: 90px;
   height: 90px;
+  border-radius: 20px;
 }
 
 .element-animation {
@@ -1922,6 +1930,10 @@ input[type=search]::-webkit-search-results-decoration {
 
 body {
   font-family: "Manrope";
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .wrapper {
