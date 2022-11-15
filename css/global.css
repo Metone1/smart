@@ -642,6 +642,7 @@ template {
   .swiper-slide img {
     margin-top: 0;
     height: 100%;
+    min-width: 295px;
   }
 }
 
@@ -912,16 +913,6 @@ input[type=search]::-webkit-search-results-decoration {
   width: 90px;
   height: 90px;
   border-radius: 20px;
-}
-
-.element-animation {
-  opacity: 0;
-  transform: translateY(40px);
-}
-.element-animation.element-show {
-  opacity: 1;
-  transition: all 1.2s;
-  transform: translateY(0%);
 }
 
 .block__title {
@@ -1554,7 +1545,7 @@ input[type=search]::-webkit-search-results-decoration {
 .main__comments {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .comments__title {
@@ -1997,4 +1988,14 @@ body.lock {
   margin: 0 auto;
   position: relative;
   padding: 0 10px;
+}
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.2s;
+  transform: translateY(0%);
 }
